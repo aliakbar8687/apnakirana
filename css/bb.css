@@ -1,0 +1,230 @@
+body{
+    font-size:20px;
+    overflow-x:hidden;
+    background-position:center;
+     background-size:cover;
+    font-family:sans-serif;
+    Font-size:15px;
+}
+body
+{
+animation: changeBg 5s infinite;
+alternate :linear;
+}
+@keyframes changeBg{
+    0%{
+        background:#f1f7f0 ;
+    }
+    25%
+    {
+        background: #d9ebe1;
+    }
+    50%
+    {
+        background: #effce8;
+    }
+    75%
+    {
+        background: #e4f8e9;
+    }
+    100%
+    {
+        background: #eafced;
+    }
+}
+.button {
+    padding: 15px 205px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  button{
+    padding: 1.1em 2em;
+    background: none;
+    border:2px solid #fff ;
+    font-size: 15px;
+    color: #131313;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-radius: 12px;
+    background-color: #ecd448;
+    font-weight: bolder;
+    box-shadow: 0 2px 0 2px #000;
+  }
+  button::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-color: #ff6700;
+    top: 50%;
+    transform: skewX(30deg)translate(-150%,-50%);
+    transition: all 0.5s;
+  }
+  button:hover{
+    background-color: #4cc9f0;
+    color: #fff;
+    box-shadow: 0 2px 0 2px #0d3b66;
+  }
+  button:hover::before{
+    transform: skewX(30deg)translate(150%,-50%);
+    transition-delay:0.1s ;
+  }
+  button{
+  transform: scale(0.9);	
+  }
+h1 {
+  color:#e80d35;
+  text-shadow: 1px 1px 2px white,0 0 25px #fefefe03, 0 0 5px #fefefe00;
+  font-size:1.7cm;
+  font-family:Cambria;
+  text-align:center;
+}
+h2{
+    letter-spacing:3.5px;
+    font-family:Candara;
+    text-align:center;
+}
+p{
+    text-align:center;
+}
+.header{
+    width:95%;
+    background-image: url("main.jpg");
+    background-repeat:no-repeat;
+}
+.navigation
+{
+    position:fixed;
+    float:right;
+}
+.navList{
+    /*background-image: linear-gradient( #fefefe00, white);
+    border-width:10px;*/
+    color:white;
+    float:right !important;
+    position:inherit;
+    margin-top:-100px;
+    right:20px;
+    /*margin-left:100px;*/
+    font-size:15px;
+    font-weight:bold;
+}
+.navList a:link, a:visited 
+{
+     margin:5px;
+     background-color: #4CAF50;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.navList a:hover, a:active {
+  background-color:#4caf5085;
+}
+.navList li{
+    display:inline-block;
+    list-style:none;
+    margin-left:40px;
+    margin-right:80px;
+}
+.navList li a{
+    text-decoration:none;
+    margin-right:20px;
+    /*text-transform:uppercase;*/
+}
+.Introduction
+{
+    position:relative;
+  /*  margin-top:100px;*/
+}
+.Introduction h1
+{
+  color:#e80d35;
+  text-shadow: 1px 1px 2px white,0 0 25px #fefefe03, 0 0 5px #fefefe00;
+  font-size:1.7cm;
+  font-family:Cambria;
+  text-align:center;
+} 
+.Introduction h2{
+    letter-spacing:3.5px;
+    font-family:Candara;
+    text-align:center;
+}
+.Introduction p{
+      text-align:center;
+}
+.button {
+    padding: 15px 205px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  button{
+      padding: 1.1em 2em;
+      background: none;
+      border:2px solid #fff ;
+      font-size: 15px;
+      color: #131313;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+      border-radius: 12px;
+      background-color: #ecd448;
+      font-weight: bolder;
+      box-shadow: 0 2px 0 2px #000;
+  }
+  button::before{
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 120px;
+      background-color: #ff6700;
+      top: 50%;
+      transform: skewX(30deg)translate(-150%,-50%);
+      transition: all 0.5s;
+  }
+  button:hover{
+      background-color: #4cc9f0;
+      color: #fff;
+      box-shadow: 0 2px 0 2px #0d3b66;
+  }
+  button:hover::before{
+      transform: skewX(30deg)translate(150%,-50%);
+      transition-delay:0.1s ;
+  }
+  button{
+  transform: scale(0.9);	
+  }

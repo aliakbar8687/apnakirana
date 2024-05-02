@@ -1,0 +1,88 @@
+body  {
+  
+    background-color: #f7f5f8;
+  }
+  .border{border-style:none none none none;
+   width:1000px;
+   margin-left: 90;
+   margin-right:auto;
+   color:rgb(240, 160, 12);
+  }
+  a:link,a:visited
+  {
+  color:#3a0202;
+  font-weight:ITALIC;
+  }
+  .myDiv{
+  border-color:rgb(68, 1, 1);
+  text-align: center;
+  background-color:#324bd6a8;
+  z-index:+1;}
+  h1{text-align:center;
+     font-size:30px;
+     text-decoration:underline;
+     }
+  h2{text-align:center;
+     font-size:20px;
+     }
+  h3{text-align:center;
+     font-size:20px;
+     } 
+  p{text-align:center;
+    font-size:20px;
+  }
+  .header{
+      background: rgba(247, 121, 3, 0.16);
+      width:10%;
+      height:40px;
+      position:fixed;
+      color:rgb(87, 2, 42);
+      border-radius:30px;
+      cursor: grab;   
+  }
+  .header:hover{
+      color: rgb(241, 10, 107);
+    cursor: pointer;
+  }
+  
+  
+  #a1{height:200px;width:200px;}
+  
+  #slider{
+       overflow:hidden;
+       }
+       #slider figure{
+       position:relative;
+       width:500%;
+       margin:0%;
+       left:0;
+       animation:20s slider infinite;
+       }
+       #slider figure img{
+       width:20%;
+       float:left;
+       }
+       @keyframes slider{
+       0%{left:0;}
+       20%{left:0;}
+       25%{left:-100%;}
+       45%{left:-100%;}
+       50%{left:-200%;}
+       70%{left:-200%;}
+       75%{left:-300%;}
+       95%{left:-300%;}
+       100%{left:-400%;}
+       }
+   
+  .border{
+      border-style:solid  none solid none;
+    margin-left:30px;
+    border-color:green;
+   border-spacing: 22px;
+  }
+  .head{
+  font-size:150%;
+  text-align:center;
+  }
+  
+  
