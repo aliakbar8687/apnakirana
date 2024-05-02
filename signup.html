@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    /* Container */
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo */
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    /* Form */
+    .labelModal {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    input[type="checkbox"] {
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* Error Message */
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport">
+ </head>
+ <body class="header">
+   <div class="logo">
+     <img src="asset/about us.png" alt="logo" />
+   </div>
+   <form id="Signup-form">
+     <div class="container">
+       <div class="labelModal"><b><u>Sign Up</u></b></div><br/>
+       <p><b>Please fill in this form to create an account.</b></p>
+       <hr>
+       <label for="email"><b>Email</b></label>
+       <input type="email" name="email" id="username-field" class="login-form-field" placeholder="EMAIL" required>
+       <label for="psw"><b>Password</b></label>
+       <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password" required>
+       <label for="psw-repeat"><b>Repeat Password</b></label>
+       <input type="password" name="password1" id="password-field1" class="login-form-field" placeholder="Password" required>
+       <label>
+         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+       </label>
+       <p><b>By creating an account you agree to our <a href="termpolicy.html" style="color:dodgerblue">Terms & Privacy</a>.</b></p>
+     </div>
+     <div class="clearfix">
+       <input type="submit" value="SignUp" id="login-form-submit">
+     </div>
+   </form>
+ 
+   <script>
+     // Form submission event listener
+     const signupForm = document.getElementById('Signup-form');
+     signupForm.addEventListener('submit', function(event) {
+       event.preventDefault(); // Prevent form submission
+ 
+       // Clear previous error messages
+       const errorMessages = document.querySelectorAll('.error-message');
+       errorMessages.forEach(function(errorMessage) {
+         errorMessage.textContent = '';
+       });
+ 
+       // Get the input values
+       const email = document.getElementById('username-field').value.trim();
+       const password = document.getElementById('password-field').value.trim();
+       const passwordRepeat = document.getElementById('password-field1').value.trim();
+ 
+       // Form validation
+       let isValid = true;
+ 
+       if (email === '') {
+         showError('username-field', 'Email is required.');
+         isValid = false;
+       }
+ 
+       if (password === '') {
+         showError('password-field', 'Password is required.');
+         isValid = false;
+       }
+ 
+       if (passwordRepeat === '') {
+         showError('password-field1', 'Repeat Password is required.');
+         isValid = false;
+       }
+ 
+       if (password !== passwordRepeat) {
+         showError('password-field1', 'Passwords do not match.');
+         isValid = false;
+       }
+ 
+       if (isValid) {
+         // Form is valid, continue with signup process
+         const signupData = {
+           email: email,
+           password: password
+         };
+ 
+         // Store the signup data in local storage
+         localStorage.setItem('signupData', JSON.stringify(signupData));
+ 
+         // Redirect to the signin page
+         window.location.href = 'signin.html';
+       }
+     });
+ 
+     // Helper function to show error message for a field
+     function showError(fieldId, message) {
+       const field = document.getElementById(fieldId);
+       const errorMessage = field.parentNode.querySelector('.error-message');
+       errorMessage.textContent = message;
+     }
+   </script>
+ </body>
+ </html>

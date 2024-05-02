@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products page</title>
+  <link rel="stylesheet" href="css/navigate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/new.css">
+  
+  <style>
+    #cartItemsContainer {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#cartItemsContainer p {
+  margin: 5px 0;
+}
+
+#cartItemsContainer button {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#cartItemsContainer button:hover {
+  background-color: #e00000;
+}
+
+#cartItemsContainer p:last-child {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#cartItemsContainer p:last-child::before {
+  content: "Total: ";
+}
+
+#cartItemsContainer p:last-child::after {
+  content: " USD";
+}
+
+
+
+  </style>
+</head>
+
+<body class="adjust-screen-size">
+  
+  <div class="menu-bar">
+    <ul>
+<li><a href="aboutus.html"><img src="asset/about us.png" width="100px" height="80px"></a>
+    
+<li><a href="#">Fruits & <br>Vegetables</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#z1">Fresh Fruits</a><i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="hover-me"><a href="#y1">Fresh Vegetables</a></br><i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="hover-me"><a href="#y1">Herbs & Seasoning</a><i class="fa fa-angle-right"></i>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Dairy&Bakery</a>
+            <div class="sub-menu-1">
+                <ul>
+                   <li><a href="#x1">Dairy </a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#w1">Breads & Buns</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#w1">Cakes</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#w1">Cookies,Rusk</a><i class="fa fa-angle-right"></i>
+                   </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Staples</a>
+             <div class="sub-menu-1">
+                 <ul>
+                   <li><a href="#u1">Atta,Flours&<br>Sooji</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#u1">Dals&Pulses</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#u1">Rice</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#u1">Edible Oils</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#u1">Dry Fruits</a><i class="fa fa-angle-right"></i>
+                   </li>
+                   <li><a href="#u1">Spices</a><i class="fa fa-angle-right"></i>
+                   </li>
+                  <li><a href="#u1">Salt,Sugar&<br>Jaggery</a><i class="fa fa-angle-right"></i>
+                  </li>
+                </ul>
+          </div>
+       </li>
+       <li><a href="#">Snack&<br>Branded Foods</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#v1">Biscuit&Cookies</a><i class="fa fa-angle-right"></i>
+                  <li><a href="#v1">Noodle,Pasta </a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#v1">Namkeen</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#v1">Chocolate&Candies</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#v1">Spreads,Sauces</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#v1">Indian Sweets</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#v1">Pickel&Chutney</a><i class="fa fa-angle-right"></i></li>
+                </ul>
+           </div>
+        </li>
+        <li><a href="#"> Beverages</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#t1">Tea</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#t1">Coffee</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#t1">Fruit Juices</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#t1">Energy&Soft Drinks</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#t1">Health Drink&Supplement</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#t1">Flavoured Milk</a><i class="fa fa-angle-right"></i></li>
+              </ul>
+          </div>
+      </li>
+      <li><a href="#">Personal Care</a>
+          <div class="sub-menu-1">
+              <ul>
+                  <li><a href="#yy">Hair Care</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#yy">Oral Care</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#yy">Bath&Hand <br>Wash</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#yy">Perfumes</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#yy">Covid Needs</a><i class="fa fa-angle-right"></i></li>
+              </ul>
+          </div>
+      </li>
+      <li><a href="#">Home Care</a>
+          <div class="sub-menu-1">
+             <ul>
+                 <li><a href="#s1">Detergents</a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">Dishwash</a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">All Purpose Cleaners</a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">Fresheners&<br>Repellents</a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">Mops,Brushes&<br>Scrubs </a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">Pooja Needs</a><i class="fa fa-angle-right"></i></li>
+                 <li><a href="#s1">Stationary</a><i class="fa fa-angle-right"></i></li>
+             </ul>
+          </div>
+      </li>
+      
+      <li><a href="#">Eggs,Meat&<br>Fish</a>
+          <div class="sub-menu-1">
+             <ul>
+                  <li><a href="#r1">Eggs</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#r1">Poultry</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#r1">Sausages</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#r1">Fish</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#r1">Bacon</a><i class="fa fa-angle-right"></i></li>
+                  <li><a href="#r1">Marinades</a><i class="fa fa-angle-right"></i></li>
+              </ul>
+          </div>
+      </li>
+    </ul>
+  
+
+  
+
+  <div class="products"></div>
+
+  <div id="slider">
+    <figure>
+      <img src="asset/g1.jpg" height="500px" width="50px">
+      <img src="asset/g2.jpg" height="500px" width="50px">
+      <img src="asset/g3.jpg" height="500px" width="50px">
+      <img src="asset/g4.jpg" height="500px" width="50px">
+      <img src="asset/g5.jpg" height="500px" width="50px">
+    </figure>
+  </div>
+
+  <hr>
+  <br><br><br>
+
+  <ol>
+    <li id="z1" class="head">FRESH FRUITS</li>
+    <br>
+    <table class="border">
+      <tr>
+        <td><img src="asset/apple.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/banana.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/orange.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/kiwi.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/mango.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/grapes.jpg" height="200px" width="200px"></td>
+      </tr>
+      <tr>
+        <th>APPLE</th>
+        <th>BANANA</th>
+        <th>ORANGE</th>
+        <th>KIWI</th>
+        <th>MANGO</th>
+        <th>GRAPES</th>
+      </tr>
+      <tr>
+        <td>MRP:10/kg</td>
+        <td>MRP:3/dozen</td>
+        <td>MRP:2/kg</td>
+        <td>MRP:15/kg</td>
+        <td>MRP:4/kg</td>
+        <td>MRP:6/kg</td>
+      </tr>
+      <tr>
+        <td>Quantity:<input type="number" id="appleQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="bananaQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="orangeQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="kiwiQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="mangoQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="grapesQuantity" min="1" max="10" value="1"></td>
+      </tr>
+      <tr>
+        <td><button onclick="addToCart('apple', '10', 'appleQuantity')">Add</button></td>
+        <td><button onclick="addToCart('banana', '3', 'bananaQuantity')">Add</button></td>
+        <td><button onclick="addToCart('orange', '2', 'orangeQuantity')">Add</button></td>
+        <td><button onclick="addToCart('kiwi', '15', 'kiwiQuantity')">Add</button></td>
+        <td><button onclick="addToCart('mango', '4', 'mangoQuantity')">Add</button></td>
+        <td><button onclick="addToCart('grapes', '6', 'grapesQuantity')">Add</button></td>
+      </tr>
+
+      <tr>
+        <td><img src="asset/watermelon.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/melon.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/guava.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/strawberry.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/pomogarante.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/papaya.jpg" height="200px" width="200px"></td>
+      </tr>
+      <tr>
+        <th>WATERMELON</th>
+        <th>MELON</th>
+        <th>GUAVA</th>
+        <th>STRAWBERRY</th>
+        <th>POMOGRANATES</th>
+        <th>PAPAYA</th>
+      </tr>
+      <tr>
+        <td>MRP:1.5/kg</td>
+        <td>MRP:2/kg</td>
+        <td>MRP:2.5/kg</td>
+        <td>MRP:15/kg</td>
+        <td>MRP:8/kg</td>
+        <td>MRP:3.3/kg</td>
+      </tr>
+      <tr>
+        <td>Quantity:<input type="number" id="watermelonQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="melonQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="guavaQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="strawberryQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="pomogranatesQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="papayaQuantity" min="1" max="10" value="1"></td>
+      </tr>
+      <tr>
+        <td><button onclick="addToCart('watermelon', '1.5', 'watermelonQuantity')">Add</button></td>
+        <td><button onclick="addToCart('melon', '2', 'melonQuantity')">Add</button></td>
+        <td><button onclick="addToCart('guava', '2.5', 'guavaQuantity')">Add</button></td>
+        <td><button onclick="addToCart('strawberry', '15', 'strawberryQuantity')">Add</button></td>
+        <td><button onclick="addToCart('pomogranates', '8', 'pomogranatesQuantity')">Add</button></td>
+        <td><button onclick="addToCart('papaya', '3.3', 'papayaQuantity')">Add</button></td>
+      </tr>
+      <br><br><br>
+    </table>
+    <li id="y1"  class="head">FRESH VEGETABLES</li>
+    <br>
+    <table class="border">
+    <tr>
+     
+   <td><img src="asset/potato.jpg" height="200px" width="200px"></td>
+   <td><img src="asset/onion.jpg" height="200px" width="200px"></td>
+   <td><img src="asset/tomato.jpg" height="200px" width="200px"></td>
+   <td><img src="asset/eggplant.jpg" height="200px" width="200px"></td>
+   <td><img src="asset/carrot.jpg" height="200px" width="200px"></td>
+   <td><img src="asset/okra.jpg" height="200px" width="200px"></td>
+     </tr>
+     <tr>
+       <th>POTATO</th>
+       <th>ONION</th>
+       <th>TOMATO</th>
+       <th>EGGPLANT</th>
+       <th>CARROT</th>
+       <th>OKRA</th>
+     </tr>
+   <tr>
+   <td>MRP:1/kg</td>
+   <td>MRP:2/kg</td>
+   <td>MRP:2.4/kg</td>
+   <td>MRP:2/kg</td>
+   <td>MRP:1.6/kg</td>
+   <td>MRP:2.2/kg</td>
+   </tr>
+   <tr>
+    <td>Quantity:<input type="number" id="potatoQunatity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="onionQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="tomatoQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="eggplantQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="carrotQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="okraQuantity" min="1" max="10" value="1"></td>
+  </tr>
+  <tr>
+    <td><button onclick="addToCart('potato', '1', 'potatoQunatity')">Add</button></td>
+    <td><button onclick="addToCart('onion', '2', 'onionQuantity')">Add</button></td>
+    <td><button onclick="addToCart('tomato', '2.4', 'tomatoQuantity')">Add</button></td>
+    <td><button onclick="addToCart('eggplant', '2', 'eggplantQuantity')">Add</button></td>
+    <td><button onclick="addToCart('carrot', '1.6', 'carrotQuantity')">Add</button></td>
+    <td><button onclick="addToCart('okra', '2.2', 'okraQuantity')">Add</button></td>
+  </tr>
+  <tr>
+    <td><img src="asset/pumpkin.jpg" height="200px" width="200px"></td>
+    <td><img src="asset/bellpepper.jpg" height="200px" width="200px"></td>
+    <td><img src="asset/garlic.jpg" height="200px" width="200px"></td>
+    <td><img src="asset/cauliflower.jpg" height="200px" width="200px"></td>
+    <td><img src="asset/peas.jpg" height="200px" width="200px"></td>
+    <td><img src="asset/spinach.jpg" height="200px" width="200px"></td>
+      </tr>
+       <tr>
+        <th>PUMPKIN</th>
+        <th>BELLPEPPER</th>
+        <th>GARLIC</th>
+        <th>CAULIFLOWER</th>
+        <th>PEAS</th>
+       <th>SPINACH</th>
+      </tr>
+    <tr>
+    <td>MRP:2/kg</td>
+    <td>MRP:6/kg</td>
+    <td>MRP:10/kg</td>
+    <td>MRP:4/kg</td>
+    <td>MRP:10/kg</td>
+    <td>MRP:1.5/kg</td>
+    </tr>
+    <tr>
+      <td>Quantity:<input type="number" id="pumkinQunatity" min="1" max="10" value="1"></td>
+      <td>Quantity:<input type="number" id="bellpepperQuantity" min="1" max="10" value="1"></td>
+      <td>Quantity:<input type="number" id="garlicQuantity" min="1" max="10" value="1"></td>
+      <td>Quantity:<input type="number" id="cauliflowerQuantity" min="1" max="10" value="1"></td>
+      <td>Quantity:<input type="number" id="peasQuantity" min="1" max="10" value="1"></td>
+      <td>Quantity:<input type="number" id="spinachQuantity" min="1" max="10" value="1"></td>
+    </tr>
+    <tr>
+      <td><button onclick="addToCart('pumpkin', '2', 'pumkinQunatity')">Add</button></td>
+      <td><button onclick="addToCart('bellpepper', '6', 'bellpepperQuantity')">Add</button></td>
+      <td><button onclick="addToCart('garlic', '10', 'garlicQuantity')">Add</button></td>
+      <td><button onclick="addToCart('cauliflower', '4', 'cauliflowerQuantity')">Add</button></td>
+      <td><button onclick="addToCart('peas', '10', 'peasQuantity')">Add</button></td>
+      <td><button onclick="addToCart('spinach', '1.5', 'spinachQuantity')">Add</button></td>
+    </tr>
+  </table>
+  <li id="x1"  class="head">DAIRY</li>
+  <br> <br><br><br>
+  <table class="border">
+      <tr>
+   
+        <td><img src="asset/milk.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/desighee.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/butter.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/curd.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/lassi.jpg" height="200px" width="200px"></td>
+        <td><img src="asset/khoya.jpg" height="200px" width="200px"></td>
+      </tr>
+       <tr>
+     <th>MILK</th>
+     <th>DESIGHEE</th>
+     <th>BUTTER</th>
+     <th>CURD</th>
+     <th>LASSI</th>
+    <th>KHOYA</th>
+   </tr>
+      <tr>
+        <td>MRP:1.5/litre</td>
+        <td>MRP:12/kg</td>
+        <td>MRP:3/100gm</td>
+        <td>MRP:1.5/kg</td>
+        <td>MRP:2/100gm</td>
+        <td>MRP:10/kg</td>
+      </tr>
+      <tr>
+        <td>Quantity:<input type="number" id="milkQunatity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="desigheeQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="butterQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="curdQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="lassiQuantity" min="1" max="10" value="1"></td>
+        <td>Quantity:<input type="number" id="khoyaQuantity" min="1" max="10" value="1"></td>
+      </tr>
+      <tr>
+        <td><button onclick="addToCart('milk', '1.5', 'milkQunatity')">Add</button></td>
+        <td><button onclick="addToCart('desighee', '12', 'desigheeQuantity')">Add</button></td>
+        <td><button onclick="addToCart('butter', '3', 'butterQuantity')">Add</button></td>
+        <td><button onclick="addToCart('curd', '1.5', 'curdQuantity')">Add</button></td>
+        <td><button onclick="addToCart('lassi', '2', 'lassiQuantity')">Add</button></td>
+        <td><button onclick="addToCart('khoya', '10', 'khoyaQuantity')">Add</button></td>
+      </tr>
+    </table>
+    <li id="w1"  class="head">BREAD & BUNS</li>
+   <br> <br><br><br>
+   <table class="border">
+   <tr>
+    
+  <td><img src="asset/browbread.jpg" height="200px" width="200px"></td>
+  <td><img src="asset/whitebread.jpg" height="200px" width="200px"></td>
+  <td><img src="asset/pizzabase.jpg" height="200px" width="200px"></td>
+  <td><img src="asset/bun.jpg" height="200px" width="200px"></td>
+  <td><img src="asset/pav.jpg" height="200px" width="200px"></td>
+  <td><img src="asset/sweetbun.jpg" height="200px" width="200px"></td>
+    </tr>
+     <tr>
+      <th>BROWN BREAD</th>
+      <th>WHITE BREAD</th>
+      <th>PIZZA BASE</th>
+      <th>BUN</th>
+      <th>PAV</th>
+     <th>SWEETBUN</th>
+    </tr>
+  <tr>
+  <td>MRP:1.5/packet</td>
+  <td>MRP:1.2/packet</td>
+  <td>MRP:1/packet</td>
+  <td>MRP:0.5/packet</td>
+  <td>MRP:0.5/packet</td>
+  <td>MRP:0.5/piece</td>
+  </tr>
+  <tr>
+    <td>Quantity:<input type="number" id="brownbreadQunatity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="whitebreadQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="pizzabaseQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="bunQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="pavQuantity" min="1" max="10" value="1"></td>
+    <td>Quantity:<input type="number" id="sweetbunQuantity" min="1" max="10" value="1"></td>
+  </tr>
+  <tr>
+    <td><button onclick="addToCart('browbread', '1.5', 'brownbreadQunatity')">Add</button></td>
+    <td><button onclick="addToCart('whitebread', '1.2', 'whitebreadQuantity')">Add</button></td>
+    <td><button onclick="addToCart('pizzabase', '1', 'pizzabaseQuantity')">Add</button></td>
+    <td><button onclick="addToCart('bun', '0.5', 'bunQuantity')">Add</button></td>
+    <td><button onclick="addToCart('pav', '0.5', 'pavQuantity')">Add</button></td>
+    <td><button onclick="addToCart('sweetbun', '0.5', 'sweetbunQuantity')">Add</button></td>
+  </tr>
+</table>
+
+<br><br><br>
+<li id="v1"  class="head">BRANDED ITEMS</li>
+<br>
+<table class="border">
+<tr>
+ 
+<td><img src="asset/biscuits.jpg" height="200px" width="200px"></td>
+<td><img src="asset/maggi.jpg" height="200px" width="200px"></td>
+<td><img src="asset/namkeen.jpg" height="200px" width="200px"></td>
+<td><img src="asset/chocolate.jpg" height="200px" width="200px"></td>
+<td><img src="asset/sauce.jpg" height="200px" width="200px"></td>
+<td><img src="asset/pickle.jpg" height="200px" width="200px"></td>
+ </tr>
+  <tr>
+   <th>BISCUITS</th>
+   <th>MAGGI</th>
+   <th>NAMKEEN</th>
+   <th>CHOCOLATES</th>
+   <th>SAUCES</th>
+  <th>PICKEL</th>
+ </tr>
+<tr>
+<td>MRP:4/kg</td>
+<td>MRP:0.5/packet</td>
+<td>MRP:1/100gm</td>
+<td>MRP:5/piece</td>
+<td>MRP:2/bottle</td>
+<td>MRP:5/kg</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="biscuitsQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="maggiQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="namkeenQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="chocolatesQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="saucesQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="pickelQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('biscuits', '4', 'biscuitsQunatity')">Add</button></td>
+  <td><button onclick="addToCart('maggi', '0.5', 'maggiQuantity')">Add</button></td>
+  <td><button onclick="addToCart('namkeen', '1', 'namkeenQuantity')">Add</button></td>
+  <td><button onclick="addToCart('chocolate', '5', 'chocolatesQuantity')">Add</button></td>
+  <td><button onclick="addToCart('Sauces', '2', 'saucesQuantity')">Add</button></td>
+  <td><button onclick="addToCart('pickle', '5', 'pickelQuantity')">Add</button></td>
+</tr>
+</table><br><br> <br><br><br>
+<li id="u1"  class="head">STAPLES</li>
+<br>  
+<table class="border">
+<tr>
+ 
+<td><img src="asset/aata.jpg" height="200px" width="200px"></td>
+<td><img src="asset/dal.jpg" height="200px" width="200px"></td>
+<td><img src="asset/rice.jpg" height="200px" width="200px"></td>
+<td><img src="asset/edibleoil.jpg" height="200px" width="200px"></td>
+<td><img src="asset/salt.jpg" height="200px" width="200px"></td>
+<td><img src="asset/dryfruits.jpg" height="200px" width="200px"></td>
+ </tr>
+  <tr>
+   <th>AATA</th>
+   <th>DAL</th>
+   <th>RICE</th>
+   <th>EDIBLE OIL</th>
+   <th>SALT & SUGAR</th>
+  <th>DRY FRUITS</th>
+ </tr>
+<tr>
+<td>MRP:2/kg</td>
+<td>MRP:5/kg</td>
+<td>MRP:3/kg</td>
+<td>MRP:5/litre</td>
+<td>MRP:1/kg</td>
+<td>MRP:20/kg</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="aataQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="dalQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="riceQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="edibleoilQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="saltQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="dryfruitsQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('aata', '2', 'aataQunatity')">Add</button></td>
+  <td><button onclick="addToCart('dal', '5', 'dalQuantity')">Add</button></td>
+  <td><button onclick="addToCart('rice', '3', 'riceQuantity')">Add</button></td>
+  <td><button onclick="addToCart('edibleoil', '5', 'edibleoilQuantity')">Add</button></td>
+  <td><button onclick="addToCart('salt', '1', 'saltQuantity')">Add</button></td>
+  <td><button onclick="addToCart('dryfruits', '20', 'dryfruitsQuantity')">Add</button></td>
+</tr>
+</table><br><br>
+   <li id="t1"  class="head">BEVERAGES</li>
+<br>  
+<table class="border">
+<tr>
+ 
+<td><img src="asset/tea.jpg" height="200px" width="200px"></td>
+<td><img src="asset/coffee.jpg" height="200px" width="200px"></td>
+<td><img src="asset/fruitjuice.jpg" height="200px" width="200px"></td>
+<td><img src="asset/energydrinks.jpg" height="200px" width="200px"></td>
+<td><img src="asset/health.jpg" height="200px" width="200px"></td>
+<td><img src="asset/flavouredmilk.jpg" height="200px" width="200px"></td>
+ </tr>
+  <tr>
+   <th>TEA</th>
+   <th>COFFEE</th>
+   <th>FRUIT JUICES</th>
+   <th>ENERGY DRINK</th>
+   <th>SUPPLEMENTS</th>
+  <th>FLAVOURED MILK</th>
+ </tr>
+<tr>
+<td>MRP:1/100gm</td>
+<td>MRP:3/100gm</td>
+<td>MRP:2/litre</td>
+<td>MRP:3/litre</td>
+<td>MRP:5/litre</td>
+<td>MRP:1/250ml</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="teaQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="coffeeQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="fruitjuiceQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="energydrinksQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="supplementsQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="flavouredmilkQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('tea', '1.5', 'teaQunatity')">Add</button></td>
+  <td><button onclick="addToCart('coffee', '1.2', 'coffeeQuantity')">Add</button></td>
+  <td><button onclick="addToCart('fruitjuice', '1', 'fruitjuiceQuantity')">Add</button></td>
+  <td><button onclick="addToCart('energydrinks', '0.5', 'energydrinksQuantity')">Add</button></td>
+  <td><button onclick="addToCart('Supplement', '0.5', 'supplementsQuantity')">Add</button></td>
+  <td><button onclick="addToCart('flavouredmilk', '0.5', 'flavouredmilkQuantity')">Add</button></td>
+</tr>
+</table><br><br>
+<li id="s1"  class="head">HOME CARE</li>
+<br>  
+<table class="border">
+<tr>
+ 
+<td><img src="asset/detergents.jpg" height="200px" width="200px"></td>
+<td><img src="asset/dishwasher.jpg" height="200px" width="200px"></td>
+<td><img src="asset/freshners.jpg" height="200px" width="200px"></td>
+<td><img src="asset/mops.jpg" height="200px" width="200px"></td>
+<td><img src="asset/pooja.jpg" height="200px" width="200px"></td>
+<td><img src="asset/stationary.jpg" height="200px" width="200px"></td>
+ </tr>
+  <tr>
+   <th>DETERGENTS</th>
+   <th>DISHWASHER</th>
+   <th>FRESHNERS</th>
+   <th>MOPS</th>
+   <th>POOJA</th>
+  <th>STATIONARY</th>
+ </tr>
+<tr>
+<td>MRP:2/kg</td>
+<td>MRP:1.5/kg</td>
+<td>MRP:4/piece</td>
+<td>MRP:12/piece</td>
+<td>MRP:5/packet</td>
+<td>MRP:5/packet</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="detergentQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="dishwasherQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="freshnersQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="mopsQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="poojaQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="stationaryQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('detergents', '2', 'detergentQunatity')">Add</button></td>
+  <td><button onclick="addToCart('dishwasher', '1.5', 'dishwasherQuantity')">Add</button></td>
+  <td><button onclick="addToCart('freshners', '4', 'freshnersQuantity')">Add</button></td>
+  <td><button onclick="addToCart('mops', '12', 'mopsQuantity')">Add</button></td>
+  <td><button onclick="addToCart('pooja', '5', 'poojaQuantity')">Add</button></td>
+  <td><button onclick="addToCart('stationary', '5', 'stationaryQuantity')">Add</button></td>
+</tr>
+</table><br><br>
+<li id="r1"  class="head">EGG MEAT & FISH</li>
+<br>  
+<table class="border">
+<tr>
+ 
+<td><img src="asset/eggs.jpg" height="200px" width="200px"></td>
+<td><img src="asset/fish.jpg" height="200px" width="200px"></td>
+<td><img src="asset/chicken.jpg" height="200px" width="200px"></td>
+<td><img src="asset/bacon.jpg" height="200px" width="200px"></td>
+<td><img src="asset/sausages.jpg" height="200px" width="200px"></td>
+<td><img src="asset/mutton.jpg" height="200px" width="200px"></td>
+ </tr>
+  <tr>
+   <th>EGGS</th>
+   <th>FISH</th>
+   <th>CHICKEN</th>
+   <th>BACON</th>
+   <th>SAUSAGES</th>
+   <th>MUTTON</th>
+ </tr>
+<tr>
+<td>MRP:1.2/dozen</td>
+<td>MRP:8/kg</td>
+<td>MRP:5/kg</td>
+<td>MRP:10/kg</td>
+<td>MRP:12/kg</td>
+<td>MRP:15/kg</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="eggsQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="fishQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="chickenQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="baconQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="sausagesQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="muttonQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('eggs', '1.2', 'eggsQunatity')">Add</button></td>
+  <td><button onclick="addToCart('fish', '8', 'fishQuantity')">Add</button></td>
+  <td><button onclick="addToCart('chicken', '5', 'chickenQuantity')">Add</button></td>
+  <td><button onclick="addToCart('bacon', '10', 'baconQuantity')">Add</button></td>
+  <td><button onclick="addToCart('sausages', '12', 'sausagesQuantity')">Add</button></td>
+  <td><button onclick="addToCart('mutton', '15', 'muttonQuantity')">Add</button></td>
+</tr>
+</table><br><br>
+
+
+
+<li id="yy"  class="head">Personal Care</li>
+<br>
+<table class="border">
+<tr>
+ 
+<td><img src="asset/shampoo.jpg" height="200px" width="200px"></td>
+<td><img src="asset/hairoil.jpg" height="200px" width="200px"></td>
+<td><img src="asset/toothpaste.jpg" height="200px" width="200px"></td>
+<td><img src="asset/soap.jpg" height="200px" width="200px"></td>
+<td><img src="asset/perfume.jpg" height="200px" width="200px"></td>
+<td><img src="asset/covid.jpg" height="200px" width="200px"></td>
+ </tr>
+ <tr>
+   <th>SHAMPOO</th>
+   <th>HAIR OIL</th>
+   <th>TOOTH PASTE</th>
+   <th>SOAP</th>
+   <th>PERFUME</th>
+  <th>COVID</th>
+ </tr>
+<tr>
+<td>MRP:3/100 ml</td>
+<td>MRP:3/100 ml</td>
+<td>MRP:1/piece</td>
+<td>MRP:1/piece</td>
+<td>MRP:5/piece</td>
+<td>MRP:25/set</td>
+
+</tr>
+<tr>
+  <td>Quantity:<input type="number" id="shampooQunatity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="hairoilQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="toothpasteQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="soapQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="perfumeQuantity" min="1" max="10" value="1"></td>
+  <td>Quantity:<input type="number" id="covidQuantity" min="1" max="10" value="1"></td>
+</tr>
+<tr>
+  <td><button onclick="addToCart('shampoo', '3', 'shampooQunatity')">Add</button></td>
+  <td><button onclick="addToCart('hairoil', '3', 'hairoilQuantity')">Add</button></td>
+  <td><button onclick="addToCart('toothpaste', '1', 'toothpasteQuantity')">Add</button></td>
+  <td><button onclick="addToCart('soap', '1', 'soapQuantity')">Add</button></td>
+  <td><button onclick="addToCart('perfume', '5', 'perfumeQuantity')">Add</button></td>
+  <td><button onclick="addToCart('covid', '25', 'covidQuantity')">Add</button></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+</ol>
+
+  
+
+
+<div id="cartItemsContainer"></div>
+ <div id="proceedToPayContainer">
+    <button onclick="proceedToPay()">Proceed to Pay</button>
+  </div>
+  
+
+  <script src="product.js"></script>
+  
+</body>
+</html>

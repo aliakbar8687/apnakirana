@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <!-- Include necessary CSS and scripts -->
+  <style>
+   .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+      color: #007bff;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="asset/about us.png" alt="logo" />
+  </div>
+  <div class="container">
+    <h1>Sign In Page</h1>
+
+    <form id="signin-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email-field" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password-field" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign In</button>
+      </div>
+      <div class="forgot-password" onclick="location.href='forgot_password.html'">Forgot Password?</div>
+    </form>
+  </div>
+  <a href="signup.html"><button type="submit" >Have a New Account Now!!!!</button></a>
+  <script>
+    // Retrieve the signup data from local storage
+    const signupDataString = localStorage.getItem('signupData');
+    if (signupDataString) {
+      // Parse the stored data back into an object
+      const signupData = JSON.parse(signupDataString);
+
+      // Use the signup data as needed
+      const email = signupData.email;
+      const password = signupData.password;
+
+      console.log('Email:', email);
+      console.log('Password:', password);
+    }
+
+    // Handle signin form submission
+    const signinForm = document.getElementById('signin-form');
+    signinForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get the input values
+      const email = document.getElementById('email-field').value;
+      const password = document.getElementById('password-field').value;
+
+      // Perform validation (e.g., checking against the stored signup data)
+      if (signupDataString) {
+        const signupData = JSON.parse(signupDataString);
+        const savedEmail = signupData.email;
+        const savedPassword = signupData.password;
+
+        if (email === savedEmail && password === savedPassword) {
+          // Successful signin
+          window.location.href = "product.html";
+          // Redirect to the home page or perform any other necessary action
+        } else {
+          // Invalid credentials
+          const errorMessage = document.createElement('div');
+          errorMessage.className = 'error-message';
+          errorMessage.innerText = 'Invalid email or password';
+
+          const formGroup = document.getElementsByClassName('form-group')[1];
+          formGroup.appendChild(errorMessage);
+
+          // Display an error message or perform any other necessary action
+        }
+      } else {
+        // No signup data found
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.innerText = 'No signup data found';
+
+        const formGroup = document.getElementsByClassName('form-group')[1];
+        formGroup.appendChild(errorMessage);
+
+        // Display an error message or perform any other necessary action
+      }
+    });
+  </script>
+</body>
+</html>

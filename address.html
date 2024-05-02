@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shipping Address Form</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+      /* CSS styles for form and button */
+      form {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+
+<body>
+  <div class="logo">
+    <img src="asset/about us.png" alt="logo" />
+  </div>
+  <h2>Shipping Address</h2>
+  <form id="shipping-form" >
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" required>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required>
+
+    <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        var address = document.getElementById("address").value;
+        var street = document.getElementById("street").value;
+        var state = document.getElementById("state").value;
+        var country = document.getElementById("country").value;
+
+        if (address === "" || street === "" || state === "" || country === "") {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        // Additional validation logic if needed
+
+        setTimeout(function () {
+          window.location.href = "./paymentcheckout.html";
+        }, 0);
+      }
+    </script>
+</body>
+
+
+</html>

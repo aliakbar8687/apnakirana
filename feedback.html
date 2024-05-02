@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEEDBACK FORM</title>
+  <link rel="stylesheet" type="text/css" href="bb.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    .col-25 {
+      flex: 25%;
+      text-align: right;
+      padding-right: 10px;
+      font-weight: bold;
+    }
+    
+    .col-75 {
+      flex: 75%;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+      font-family: Arial, sans-serif;
+    }
+    
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="asset/about us.png" alt="logo" />
+    </div>
+    <h1>FEEDBACK FORM</h1>
+  </div>
+  <div class="container">
+    <form id="feedback-form">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname"><b>First Name</b></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <div class="error-message" id="fname-error"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname"><b>Last Name</b></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <div class="error-message" id="lname-error"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email"><b>Email</b></label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="Your email..">
+          <div class="error-message" id="email-error"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="feedback"><b>Feedback</b></label>
+        </div>
+        <div class="col-75">
+          <textarea id="feedback" name="feedback" placeholder="Write your feedback.." rows="6"></textarea>
+          <div class="error-message" id="feedback-error"></div>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Form submission event listener
+    const feedbackForm = document.getElementById('feedback-form');
+    feedbackForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Clear previous error messages
+      document.querySelectorAll('.error-message').forEach(function(element) {
+        element.textContent = '';
+      });
+
+      // Get the form input values
+      const fname = document.getElementById('fname').value.trim();
+      const lname = document.getElementById('lname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const feedback = document.getElementById('feedback').value.trim();
+
+      // Form validation
+      let isValid = true;
+
+      if (fname === '') {
+        document.getElementById('fname-error').textContent = 'First name is required.';
+        isValid = false;
+      }
+
+      if (lname === '') {
+        document.getElementById('lname-error').textContent = 'Last name is required.';
+        isValid = false;
+      }
+
+      if (email === '') {
+        document.getElementById('email-error').textContent = 'Email is required.';
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        document.getElementById('email-error').textContent = 'Invalid email format.';
+        isValid = false;
+      }
+
+      if (feedback === '') {
+        document.getElementById('feedback-error').textContent = 'Feedback is required.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Form is valid, do something with the data
+        console.log('Form data:', {
+          firstname: fname,
+          lastname: lname,
+          email: email,
+          feedback: feedback
+        });
+
+        // Reset the form
+        feedbackForm.reset();
+      }
+    });
+
+    // Helper function to validate email format
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</body>
+</html>

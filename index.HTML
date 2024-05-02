@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <title>APNA KIRYANA</title>
+  <link rel="stylesheet" type="text/css" href="css/bb.css" />
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    .header {
+      background-color: #fff;
+    }
+
+    .logo {
+      padding: 10px;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .menu {
+      height: 50px;
+      background-color: #333;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+    }
+
+    .navList a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .Introduction {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .Introduction h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .Introduction h2 {
+      font-size: 24px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .Introduction h2 span {
+      color: #ff9800;
+    }
+
+    .Introduction p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .click {
+      padding: 10px 20px;
+      background-color: #ff9800;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .click a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .click a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="header">
+  <div class="logo">
+    <img src="asset/about us.png" alt="logo" />
+  </div>
+  <div class="menu"></div>
+  <nav class="navigation">
+    <div class="navList">
+      <a href="aboutus.html">About us</a>
+      <a href="signin.html">Sign In</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+  </nav>
+  <div class="Introduction">
+    <h1>APNA KIRANA</h1>
+    <h2><em>The<span> Real Smell Of Grocery!!</span></em></h2>
+    <p>
+      Subscribe to Apna Kirana and get a daily supply of fresh milk, vegetables,
+      fruits, and grocery at your doorstep and at your prescribed time.
+    </p>
+    <button onclick="firstSignIn()" type="submit"><a href="signin.html">Products</a></button>
+  </div>
+  <script>
+function firstSignIn()
+{
+  alert('Please SignIn To View The Products');
+  window.reload.href="signin.html";
+}
+  </script>
+</body>
+</html>
